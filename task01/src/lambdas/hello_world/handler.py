@@ -9,13 +9,26 @@ class HelloWorld(AbstractLambda):
     def validate_request(self, event) -> dict:
         pass
         
+    # def handle_request(self, event, context):
+    #     """
+    #     Explain incoming event here
+    #     """
+    #     # todo implement business logic
+    #     return 200
+
     def handle_request(self, event, context):
         """
         Explain incoming event here
         """
         # todo implement business logic
-        return 200
-    
+        response = {
+                    "statusCode": 200,
+                    "body": "hello from lambda"
+                }
+        return response
+
+
+
 
 HANDLER = HelloWorld()
 
