@@ -9,4 +9,5 @@ class TestSuccess(HelloWorldLambdaTestCase):
     def test_success(self):
         response = self.HANDLER.handle_request(dict(), dict())
         self.assertEqual(response['statusCode'], 200)
-        self.assertEqual(response['body'], "hello from lambda")
+        self.assertEqual(response['message'], "Hello from Lambda")
+

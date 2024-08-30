@@ -23,11 +23,9 @@ class HelloWorld(AbstractLambda):
         # todo implement business logic
         response = {
                     "statusCode": 200,
-                    "body": "hello from lambda"
+                    "message": "Hello from Lambda"
                 }
         return response
-
-
 
 
 HANDLER = HelloWorld()
