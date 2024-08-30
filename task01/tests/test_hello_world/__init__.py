@@ -3,12 +3,12 @@ import importlib
 from tests import ImportFromSourceContext
 
 with ImportFromSourceContext():
-    LAMBDA_HANDLER = importlib.import_module('lambdas.helloworld.handler')
+    LAMBDA_HANDLER = importlib.import_module('lambdas.hello_world.handler')
 
 
-class HelloworldLambdaTestCase(unittest.TestCase):
+class HelloWorldLambdaTestCase(unittest.TestCase):
     """Common setups for this lambda"""
 
     def setUp(self) -> None:
-        self.HANDLER = LAMBDA_HANDLER.Helloworld()
+        self.HANDLER = LAMBDA_HANDLER.HelloWorld()
 
